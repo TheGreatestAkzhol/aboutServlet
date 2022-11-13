@@ -43,4 +43,12 @@
         <servlet-name>CountServlet</servlet-name>
         <url-pattern>/count-servlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.example.javaee.javaee.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart-servlet</url-pattern>
+    </servlet-mapping>
 </web-app>
