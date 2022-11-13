@@ -10,12 +10,9 @@ import java.io.PrintWriter;
 public class NewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter pw = response.getWriter();
-        pw.println("<html>");
-        pw.println("<body>");
-        pw.println("<h1>Hello world!</h1>");
-        pw.println("</body>");
-        pw.println("</html>");
+//        response.sendRedirect("/test-jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/test-jsp");
+        requestDispatcher.forward(request,response);
     }
 
     @Override
