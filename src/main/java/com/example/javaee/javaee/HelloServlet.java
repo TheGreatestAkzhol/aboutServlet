@@ -15,13 +15,16 @@ public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+        //localhost:8080/hello-world?name=Akzhol
+        //порядок задания не важен
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + message + " "+ name + " " + surname + "</h1>");
         out.println("</body></html>");
-        response.sendRedirect("firstJSP.jsp");
+//        response.sendRedirect("firstJSP.jsp");
     }
 
     public void destroy() {

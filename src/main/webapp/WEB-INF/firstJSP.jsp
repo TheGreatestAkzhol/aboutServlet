@@ -40,5 +40,9 @@
 <p>
 <%=someString1%>
 </p>
+<p>
+  <% String name = request.getParameter("name");
+      out.println("Hello " + name); %>
+</p>
 </body>
 </html>
